@@ -10,7 +10,7 @@ terraform {
 provider "aws" {
   region = "us-west-1"
 }
-
+# RESOURCES #
 resource "aws_s3_bucket" "state_buckets" {
   count         = var.bucket_count
   bucket        = "${var.bucket_base_name}-${var.bucket_suffix[count.index]}"
