@@ -1,3 +1,6 @@
+# DATA #
+data "aws_caller_identity" "current" {}
+
 terraform {
   required_providers {
     aws = {
@@ -8,7 +11,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-1"
+  region = "us-east-1"
 }
 # RESOURCES #
 resource "aws_s3_bucket" "state_buckets" {
@@ -32,7 +35,6 @@ resource "aws_s3_bucket_policy" "policies" {
   policy = data.aws_iam_policy_document.access_bucket[count.index].json
 }
 
-data "aws_caller_identity" "current" {}
 
 data "aws_iam_policy_document" "access_bucket" {
   count = var.bucket_count
