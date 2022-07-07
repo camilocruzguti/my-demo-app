@@ -1,0 +1,10 @@
+## Helm version
+apiVersion: v2
+name: frontend
+## char version, changes when the file structure changes
+version: 0.1.0
+## until here required fields
+## optional fields
+description: demo frontend
+appVersion: "1.0"
+type: application

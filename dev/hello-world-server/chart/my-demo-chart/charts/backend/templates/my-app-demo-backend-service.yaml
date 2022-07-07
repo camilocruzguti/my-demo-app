@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # label: backend
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{ .Release.Name }}-{{ .Chart.Name }}

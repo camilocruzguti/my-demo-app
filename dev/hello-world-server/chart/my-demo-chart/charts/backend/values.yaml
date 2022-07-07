@@ -1,0 +1,11 @@
+image:
+  repository: camilocruz10/python-flask-server
+  tag: "latest"
+replicaCount: 5
+service:
+  type: ClusterIP
+  port: 80
+labels: backend
+ingress:
+  hosts:
+    backend: backend.minikube.local
