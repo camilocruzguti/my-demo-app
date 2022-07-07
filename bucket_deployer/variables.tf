@@ -1,6 +1,6 @@
 variable "bucket_suffix" {
   type    = list(string)
-  default = ["vpc"]
+  default = ["vpc", "eks"]
 }
 
 variable "bucket_base_name" {
@@ -10,5 +10,5 @@ variable "bucket_base_name" {
 
 variable "bucket_count" {
   type    = number
-  default = 1
+  default = 2
 }

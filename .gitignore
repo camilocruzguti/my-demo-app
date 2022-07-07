@@ -1,3 +1,8 @@
 */.terraform*
 dev/vpc/.terraform*/*
 dev/vpc/.terraform*
+dev/eks/.terraform
+dev/eks/my-demo-app-us1-gp1/.terraform*
+bucket_deployer/terraform.tfstate
+bucket_deployer/terraform.tfstate.backup
+dev/eks/my-demo-app-us1-gp1/.terraform
