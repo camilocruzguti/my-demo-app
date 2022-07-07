@@ -7,8 +7,3 @@ variable "base_name" {
   type    = string
   default = "cacruz-my-demo-app"
 }
-
-variable "amount_az" {
-  type    = number
-  default = 2
-}
