@@ -93,7 +93,7 @@ module "eks" {
     my_web_app_gp1_us1 = {
       min_size     = 2
       max_size     = 3
-      desired_size = 2
+      desired_size = 3
 
       instance_types = ["t3.large"]
       capacity_type  = "SPOT"
