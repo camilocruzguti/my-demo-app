@@ -1,3 +1,13 @@
 ingress:
   hosts:
     frontend: frontend.minikube.local
+config:
+  backend_uri: "http://backend.minikube.local"
+  guestbook_name: "test_name_2"
+image:
+  repository: camilocruz10/front
+  tag: "latest"
+replicaCount: 5
+service:
+  type: ClusterIP
+  port: 80

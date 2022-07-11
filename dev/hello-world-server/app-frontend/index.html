@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Ahoy Team</title>
+</head>
+<script>
+    async function fetchAsync() {
+        url = 'http://backend.minikube.local/'
+        let response = await fetch(url, {
+            "Content-Type": "text/html; charset=utf-8",
+            "Access-Control-Allow-Credentials": true
+        });
+        let data = await response.text().then(function (response) {
+            alert(response);
+        });
+        return data;
+    }
+</script>
+
+<body style="background-color:#FFFFFF">
+    <h1>Ahoy Team!</h1>
+    <p style="text-align: center;">
+        <img src="kuberneteslogo.png" alt="YEAH!" style="margin-left:auto;margin-right:auto">
+    </p>
+    <input id="clickMe" type="button" value="backend service" onclick="fetchAsync();" />
+</body>
+
+</html>

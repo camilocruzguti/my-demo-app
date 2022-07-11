@@ -1,11 +1,14 @@
 from flask import Flask
+from flask import Response
 import os
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Flask inside Docker!!"
+    resp = Response("hello world from flask backend!!!")
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
