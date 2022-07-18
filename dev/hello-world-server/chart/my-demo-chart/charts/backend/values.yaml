@@ -8,4 +8,4 @@ service:
 labels: backend
 ingress:
   hosts:
-    backend: backend.minikube.local
+    backend: backend.dev.twilio-otk-connect.com

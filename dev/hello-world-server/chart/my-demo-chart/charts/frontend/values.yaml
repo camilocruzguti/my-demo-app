@@ -1,8 +1,8 @@
 ingress:
   hosts:
-    frontend: frontend.minikube.local
+    frontend: frontend.dev.twilio-otk-connect.com
 config:
-  backend_uri: "http://backend.minikube.local"
+  backend_uri: "http://backend.dev.twilio-otk-connect.com"
   guestbook_name: "test_name_2"
 image:
   repository: camilocruz10/front
