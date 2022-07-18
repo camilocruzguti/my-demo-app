@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-demo-argo-app-frontend
+spec:
+  destination:
+    namespace: default
+    server: ""
+  project: my-demo-app-project
+  source:
+    path: ./dev/hello-world-server/chart/my-demo-chart/charts/backend
+    repoURL: https://github.com/camilocruzguti/my-demo-app.git
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
