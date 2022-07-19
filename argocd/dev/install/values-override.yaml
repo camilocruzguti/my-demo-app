@@ -15,9 +15,9 @@ server:
         helm:
           version: v3
           valueFiles:
-            - values.yaml
-            - ../values-override.yaml
-        path: argocd/dev/install
+            #- values.yaml
+            - values-override.yaml
+        path: argocd/dev/install/charts/argo-cd
         repoURL: https://github.com/camilocruzguti/my-demo-app.git
         targetRevision: HEAD
       syncPolicy:
