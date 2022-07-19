@@ -4,7 +4,7 @@ metadata:
   name: my-demo-argo-app-frontend
 spec:
   destination:
-    namespace: arg
+    namespace: argocd
     server: ""
   project: my-demo-app-project
   source:
