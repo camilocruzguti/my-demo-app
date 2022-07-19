@@ -4,10 +4,14 @@ metadata:
   name: my-demo-argo-app-frontend
 spec:
   destination:
-    namespace: default
+    namespace: arg
     server: ""
   project: my-demo-app-project
   source:
+    helm:
+      version: v3
+      valueFiles:
+        - values.yaml
     path: ./dev/hello-world-server/chart/my-demo-chart/charts/backend
     repoURL: https://github.com/camilocruzguti/my-demo-app.git
   syncPolicy:
