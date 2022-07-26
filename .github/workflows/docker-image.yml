@@ -3,8 +3,6 @@ name: Frontend Docker Image CI
 on:
   push:
     branches: [ "main" ]
-    paths:
-    - dev/hello-world-server/app-frontend
   pull_request:
     branches: [ "main" ]
 
